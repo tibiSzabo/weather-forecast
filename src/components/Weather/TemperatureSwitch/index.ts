@@ -1,0 +1,1 @@
+export { TemperatureSwitch } from './TemperatureSwitch'

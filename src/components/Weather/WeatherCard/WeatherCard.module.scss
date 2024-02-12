@@ -1,0 +1,110 @@
+.WeatherCardContainer {
+  flex-direction: column;
+
+  &.MainCard {
+    flex-basis: 100%;
+    margin: auto;
+
+    .WeatherCard {
+      width: 300px;
+      height: 350px;
+    }
+  }
+}
+
+.WeatherCard {
+  flex-direction: column;
+  gap: 6px;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  width: 250px;
+  height: 300px;
+  align-items: center;
+  border-radius: 35px;
+  padding: 12px;
+  color: whitesmoke;
+  margin: auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+  .Temperature {
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .SearchTerm {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+
+  .DescriptionContainer {
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+    text-transform: capitalize;
+
+    .Description {
+      font-size: 1rem;
+    }
+
+    .Time {
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+  }
+
+  .WindHumidityContainer {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &.PlaceHolderCard {
+    justify-content: flex-start;
+    width: auto;
+    max-width: 450px;
+    min-width: 300px;
+    height: 350px;
+    text-align: center;
+
+    .SpinnerContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ErrorInfo {
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      width: 100%;
+      gap: 12px;
+
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+@media (max-height: 800px) {
+  .WeatherCardContainer {
+    .WeatherCard {
+      gap: 0;
+      height: 250px;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &.MainCard {
+      height: 300px !important;
+    }
+
+  }
+}
